@@ -45,10 +45,10 @@ public class Main {
                 {
                     firstNumb -= 10;
                     secondNumb -= 10;
-                    if (parts[1].charAt(0) == '+') {return romaninConverter(firstNumb + secondNumb);}
-                    if (parts[1].charAt(0) == '-') {return romaninConverter(firstNumb - secondNumb);}
-                    if (parts[1].charAt(0) == '*') {return romaninConverter(firstNumb * secondNumb);}
-                    if (parts[1].charAt(0) == '/') {return romaninConverter(firstNumb / secondNumb);}
+                    if (parts[1].charAt(0) == '+') {return romanianConverter(firstNumb + secondNumb);}
+                    if (parts[1].charAt(0) == '-') {return romanianConverter(firstNumb - secondNumb);}
+                    if (parts[1].charAt(0) == '*') {return romanianConverter(firstNumb * secondNumb);}
+                    if (parts[1].charAt(0) == '/') {return romanianConverter(firstNumb / secondNumb);}
                     throw new Exception();
                 }
             }
@@ -92,7 +92,7 @@ public class Main {
 
 
     //Конвертер (индекс равен значению)
-    public static String romaninConverter(int numb) throws Exception
+    public static String romanianConverter(int numb) throws Exception
     {
         if (numb < 1)
             throw new Exception();
