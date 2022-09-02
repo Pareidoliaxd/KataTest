@@ -11,7 +11,7 @@ public class Main {
                 "X + 8",
                 "5 +- 5",
                 "5  * 5",
-                "5 + 5 * 5",
+                "5 + 5 *",
                 "5+5",
                 "5 % 5"};
         for(String test : tests)
@@ -25,9 +25,7 @@ public class Main {
     {
         String[] parts = input.split(" ");
         if (parts.length != 3)
-        {
             throw new Exception();
-        }
         try {
             int firstNumb = checkValue(parts[0]);
             int secondNumb = checkValue(parts[2]);
@@ -45,10 +43,10 @@ public class Main {
                 {
                     firstNumb -= 10;
                     secondNumb -= 10;
-                    if (parts[1].charAt(0) == '+') {return romaninConverter(firstNumb + secondNumb);}
-                    if (parts[1].charAt(0) == '-') {return romaninConverter(firstNumb - secondNumb);}
-                    if (parts[1].charAt(0) == '*') {return romaninConverter(firstNumb * secondNumb);}
-                    if (parts[1].charAt(0) == '/') {return romaninConverter(firstNumb / secondNumb);}
+                    if (parts[1].charAt(0) == '+') {return romanianConverter(firstNumb + secondNumb);}
+                    if (parts[1].charAt(0) == '-') {return romanianConverter(firstNumb - secondNumb);}
+                    if (parts[1].charAt(0) == '*') {return romanianConverter(firstNumb * secondNumb);}
+                    if (parts[1].charAt(0) == '/') {return romanianConverter(firstNumb / secondNumb);}
                     throw new Exception();
                 }
             }
@@ -92,7 +90,7 @@ public class Main {
 
 
     //Конвертер (индекс равен значению)
-    public static String romaninConverter(int numb) throws Exception
+    public static String romanianConverter(int numb) throws Exception
     {
         if (numb < 1)
             throw new Exception();
